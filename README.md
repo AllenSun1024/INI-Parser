@@ -76,8 +76,8 @@ if(section.has(key)){
 ## Task List🎆
 - [x] Design the data structure of INI
 - [x] Write the INI reader
-- [] Write the INI writer
-
+- [ ] Write the INI writer
+- [ ] More possible features?
 
 
 
