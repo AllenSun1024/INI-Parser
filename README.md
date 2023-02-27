@@ -7,29 +7,29 @@ INI_Parser:
  |  
  |--common  
  |   
- |  |--INIMap.h 定义INI数据结构    
+ |--|--INIMap.h 定义INI数据结构    
  |    
- |  |--INIMapImpl.h  
+ |--|--INIMapImpl.h  
  |  
  |--reader  
  |    
- |  |--INIReader.h  读取INI文件  
+ |--|--INIReader.h  读取INI文件  
  |    
- |  |--INIReaderImpl.h  
+ |--|--INIReaderImpl.h  
  |  
  |--src  
  |    
- |  |--main.cpp  
+ |--|--main.cpp  
  |  
  |--test_data.ini  ini配置文件  
  |  
-  --CMakeLists.txt  
+ |--CMakeLists.txt  
 
 ## Instructions 使用说明
-- INIStructure = INIMap<INIMap<std::string>>：  
+1. INIStructure = INIMap<INIMap<std::string>>可以映射到下面的ini文件结构：    
   INI_File< INI_Section< Key(string):Value(string) > >
-- INIStructure file_obj.get("section_name") => INIMap<std::string>
-- INIMap<std::string> section_obj:   
+2. INIStructure file_obj.get("section_name")的返回值 => INIMap<std::string>
+3. INIMap<std::string> section_obj调用不同get接口的返回值:   
   section_obj.get("key") => value(std::string),  section_obj.get_int("key") => value(int)
-- Names of Sections & Keys are case insensitive.   
+4. Names of Sections & Keys are case insensitive.   
   Section名和键名是大小写不敏感的。
